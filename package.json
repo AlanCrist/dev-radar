@@ -1,5 +1,5 @@
 {
-  "name": "dev-waze-backend",
+  "name": "dev-radar",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "mongoose": "^5.8.9"
   },
   "scripts": {
-    "dev": "nodemon backend/src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
