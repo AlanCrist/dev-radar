@@ -1,6 +1,4 @@
 const { Router } = require("express");
-const axios = require("axios");
-const Dev = require("./models/Dev");
 
 const DevController = require("./controllers/DevController")
 const SearchController = require("./controllers/SearchController")
@@ -13,4 +11,4 @@ routes.get("/devs", DevController.index);
 
 routes.get("/search", SearchController.index);
 
-module.exports = routes;
+module.exports = routes; 

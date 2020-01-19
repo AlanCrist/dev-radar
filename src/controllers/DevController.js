@@ -9,6 +9,12 @@ module.exports = {
         return res.json(devs);
     },
 
+    async show(req, res) {
+        const { id } = req.params;
+        const devs = await Dev.findById(id);
+        return devs
+    },
+
     async store(req, res) {
         const { github_username, techs, latitude, longitude } = req.body;
 
