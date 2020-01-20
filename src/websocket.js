@@ -11,16 +11,14 @@ exports.setupWebsocket = (server) => {
     io.on('connection', socket => {
         const { latitude, longitude, techs } = socket.handshake.query;
 
-        if (latitude || longitude || techs) {
-            connections.push({
-                id: socket.id,
-                coordinates: {
-                    latitude: Number(latitude),
-                    longitude: Number(longitude),
-                },
-                techs: parseStringAsArray(techs)
-            });
-        }
+        connections.push({
+            id: socket.id,
+            coordinates: {
+                latitude: Number(latitude),
+                longitude: Number(longitude),
+            },
+            techs: techs.split(',').map(tech => tech.trim())
+        });
 
 
     });
